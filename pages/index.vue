@@ -77,7 +77,6 @@ export default Vue.extend({
         return this.entries;
       }
       this.page = 1;
-      console.log(this.entries);
       if (this.searchMode === 'name') {
         // @ts-ignore
         return this.entries.filter((x) => x.Name.toLowerCase().includes(this.search.toLowerCase()));
