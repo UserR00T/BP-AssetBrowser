@@ -14,9 +14,9 @@
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
+            <option value="4" class="hidden sm:block">4</option>
+            <option value="5" class="hidden sm:block">5</option>
+            <option value="6" class="hidden sm:block">6</option>
           </select>
         </section>
         <section class="flex mx-4">
@@ -55,7 +55,7 @@ import Vue from 'vue';
 export default Vue.extend({
   data() {
     return {
-      gridSize: 4,
+      gridSize: screen.width < 1026 ? 1 : 4,
       searchMode: 'name',
       entries: [],
       search: '',
